@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <script src="./javascripts/script.js"></script>
+    <script src="./javascripts/loadHTML.js"></script>
+    <script src="./javascripts/loadURL.js"></script>
+    <script src="./javascripts/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js" integrity="sha512-JPcRR8yFa8mmCsfrw4TNte1ZvF1e3+1SdGMslZvmrzDYxS69J7J49vkFL8u6u8PlPJK+H3voElBtUCzaXj+6ig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/types.css">
+    <link rel="stylesheet" href="./styles/background.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="img/pokeballRed.png" type="image/x-icon">
+</head>
+
+<body class="scroller" onload="loadPokemon(); ">
+
+    <div class="backgroundimage">
+
+
+    </div>
+
+    <header>
+        <div class="spaceBtw">
+             
+                <img class="pokedexImage" src="./img/pokedex-96.png" alt="">
+                <h1>POKEDEX</h1>
+         
+        </div>
+        <input type="text" id="search" onchange="filter()" placeholder="Suche....">
+    </header>
+
+
+    <div id="pokedex" class="pokedex center"></div>
+
+
+    <div id="dialog" onclick="closeDialog()" class="dialog d-none">
+
+        <div class="pointer" onclick="dontCloseDialog(event)" id="arrowBack"></div>
+
+        <div onclick="dontCloseDialog(event)" class="detailedCardAboutOnePokemon">
+            <div id="pokemonHeader"></div>
+            <div class="infoContainer">
+                <div id="category" class="positionCenterWithGap category"> </div>
+                <div id="informationAboutPokemon" class="information"> </div>
+            </div>
+        </div>
+
+        <div class="pointer" onclick="dontCloseDialog(event)" id="arrowFront"></div>
+
+    </div>
+
+    <div class="center">
+        <button id="loadPokemon" class="pointer" onclick="loadPokemon()">Load Pokemon</button>
+    </div>
+
+</body>
+
+</html>

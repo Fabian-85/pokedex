@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    color: red;
+}
+
+
+.spaceBtw {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.positionCenterWithGap {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/*-------------hompage------------------*/
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px;
+}
+
+.pokedex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.backgroundimage {
+    background-image: url(../img/team-1572487_1280.webp);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+
+}
+
+.pokemonSpriteSmall {
+    width: 240px;
+    height: 240px;
+}
+
+.catchSmall {
+    width: 40px;
+    height: 40px;
+}
+
+button{
+    padding: 15px;
+    margin: 25px 0;
+    color: white;
+    background-color: rgb(26, 26, 26);
+    border-radius: 10px;
+}
+
+/*------------- pokemonInfoCard ------------------*/
+
+.dialog {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.detailedCardAboutOnePokemon {
+    height: 80vh;
+    width: 450px;
+    overflow-y: scroll;
+}
+
+.arrowPlaceholder{
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.detailedCardImg {
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.information {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.changeFlexDirectionForEvolutionSection {
+    flex-direction: row;
+}
+
+.infoContainer {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: -48px;
+    min-height: 200px;
+}
+
+.pokemonSpriteBig {
+    width: 160px;
+    height: 160px;
+}
+
+.category {
+    padding: 20px 0;
+}
+
+.pokedexEntry {
+    margin: 0 10px 10px 10px;
+    padding: 5px;
+    border: 5px rgb(129 4 10 / 100%) solid;
+    background-color: rgb(129 4 10 / 90%);
+    color: white;
+    border-radius: 10px;
+    font-style: oblique;
+}
+
+
+.pokemonPropertyTable {
+    padding: 15px;
+}
+
+.pokemonPropertyTable tr td:first-child {
+    color: rgb(84 87 91 / 79%);
+    font-weight: bold;
+}
+
+.pokemonPropertyTable tr td:last-child {
+    color: black;
+    font-weight: bold;
+}
+
+
+.pokemonEvolutionSprite {
+    width: 100px;
+    height: 100px;
+}
+
+canvas{
+    width: 90% !important;
+}
+
+.pokemonStats{
+    width: 100%;
+    height: auto !important;
+}
+
+
+/*------------- responsive ------------------*/
+@media(max-width:550px) {
+    header {
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .evolutionSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .ecolutionArrow {
+        transform: rotate(90deg);
+        width: 40px;
+    }
+
+    .arrow {
+        width: 40px;
+    }
+}
+
+@media(max-width:410px) {
+    h3{
+        font-size: 16px;
+    }
+    table{
+        font-size: 13px;
+    }
+}
+
+@media(max-width:350px) {
+    h3{
+        font-size: 12px;
+    }
+    table{
+        font-size: 10px;
+    }
+}
+
+/*-------------scrollBar------------------*/
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track,
+.detailedCardAboutOnePokemon::-webkit-scrollbar-track {
+    background: rgb(12, 8, 56);
+    ;
+}
+
+body::-webkit-scrollbar-thumb,
+.detailedCardAboutOnePokemon::-webkit-scrollbar-thumb {
+    background-color: rgb(8, 192, 255);
+    border-radius: 7px;
+    border: 1px solid rgb(12, 8, 56);
+}
+
+.detailedCardAboutOnePokemon::-webkit-scrollbar {
+    width: 5px;
+}
